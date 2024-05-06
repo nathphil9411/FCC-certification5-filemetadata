@@ -18,9 +18,9 @@ app.post("/api/fileanalyse", upload.single("upfile"), (req, res) => {
 
 	// Respond with JSON containing file details
 	res.json({
-		filename: originalname,
-		filetype: mimetype,
-		sizeInBytes: size,
+		name: originalname,
+		type: mimetype,
+		sizeIn: size,
 	});
 });
 const port = process.env.PORT || 3000;
